@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 gem 'coffee-rails', '~> 4.0.0'
 gem 'devise'
+gem 'haml', '~> 4.0.5'
 gem 'jbuilder', '~> 2.0' # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jquery-rails'
 gem 'mysql2'
