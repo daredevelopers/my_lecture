@@ -6,7 +6,8 @@ gem 'haml', '~> 4.0.5'
 gem 'jbuilder', '~> 2.0' # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jquery-rails'
 gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
-gem 'mysql2'
+#gem 'mysql2'
+gem 'pg', '~> 0.17.1'
 gem 'rails', '4.1.5'
 gem 'sass-rails', '~> 4.0.3'
 gem 'therubyracer',  platforms: :ruby # See https://github.com/sstephenson/execjs#readme for more supported runtimes
