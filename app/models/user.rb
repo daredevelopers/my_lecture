@@ -5,4 +5,8 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   self.inheritance_column = :access_type
+  
+  def is_student?
+    self.access_type == "Student"
+  end
 end

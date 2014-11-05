@@ -22,7 +22,10 @@
                   %span.caret
                 %ul.dropdown-menu{:role => "menu"}
                   %li
-                    %a{:href => "#"} Edit Profile
+                    - if current_user.is_student?
+                      = link_to "Edit Profile", edit_student_registration_path(current_user.id)
+                    - else
+                      = link_to "Edit Profile", edit_lecturer_registration_path(current_user.id)
                   %li.divider
                   %li
                     = link_to "Logout", destroy_user_session_path, method: :delete
