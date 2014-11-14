@@ -22,7 +22,7 @@
                   %span.caret
                 %ul.dropdown-menu{:role => "menu"}
                   %li
-                    %a{:href => "#"} Edit Profile
+                    %a{:href => edit_lecturer_registration_path} Edit Profile
                   %li.divider
                   %li
                     = link_to "Logout", destroy_user_session_path, method: :delete
@@ -54,4 +54,17 @@
               %input.form-control{:placeholder => "Search", :type => "text"}
             %button.btn.btn-default{:type => "submit"} Submit
 
-    = yield
+    - if user_signed_in?
+      .col-sm-3
+        .navbar-default.sidebar{:role => "navigation"}
+          .sidebar-nav.navbar-collapse
+            %ul#side-menu.nav
+              %li
+                %a.active{:href => courses_path}
+                  %i.fa.fa-dashboard.fa-fw
+                  Courses
+          / /.sidebar-collapse
+      .col-sm-9
+        = yield
+    - else
+      = yield
