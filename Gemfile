@@ -21,6 +21,7 @@ end
 
 group :development, :test do
   #gem 'debugger'
+  gem 'pry'
 end
 
 group :doc do
