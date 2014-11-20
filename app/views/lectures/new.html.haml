@@ -1,0 +1,15 @@
+= form_for @lecture do |f|
+  .field
+    = f.label :course_id, "Course"
+    = f.select :course_id, Course.all.map{|e| [e.name, e.id]}
+
+  .field
+    = f.label :name
+    = f.text_field :name
+
+  .field
+    = f.label :video
+    = f.file_field :video, id: "fileupload"
+
+  .field
+    = f.submit

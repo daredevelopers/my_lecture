@@ -1,0 +1,10 @@
+= link_to "New Lecture", new_lecture_path
+
+%legend Lectures
+%ul
+  - @lectures.each do |lecture|
+    %li
+      %b.course= lecture.course.name
+      .name= lecture.name
+      .lecture
+        = video_tag lecture.video.url(:mp4), size: "240x180", :controls => true
