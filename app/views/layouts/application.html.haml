@@ -4,6 +4,7 @@
     %title MyLecture
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = javascript_include_tag :defaults
     = csrf_meta_tags
   %body
     %nav.navbar.navbar-primary{:role => "navigation"}
@@ -63,9 +64,9 @@
           .sidebar-nav.navbar-collapse
             %ul#side-menu.nav
               %li
-                %a.active{:href => courses_path}
+                = link_to lectures_path, class: "active" do
                   %i.fa.fa-dashboard.fa-fw
-                  Courses
+                  Show all Lectures
           / /.sidebar-collapse
       .col-sm-9
         = yield

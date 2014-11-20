@@ -1,3 +1,3 @@
 class Lecturer < User
-  has_many :courses
+  has_many :lectures
 end

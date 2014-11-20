@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'carrierwave'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'devise'
 gem 'haml', '~> 4.0.5'
@@ -10,10 +11,12 @@ gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) support
 gem 'pg', '~> 0.17.1'
 gem 'rails', '4.1.5'
 gem 'sass-rails', '~> 4.0.3'
+#gem 'streamio-ffmpeg', '~> 1.0.0'
 gem 'therubyracer',  platforms: :ruby # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 gem 'turbolinks' # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem "twitter-bootstrap-rails"
 gem 'uglifier', '>= 1.3.0' # Use Uglifier as compressor for JavaScript assets
+gem 'voyeur', '~> 0.2.0'
 
 group :development do
   gem 'spring' # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
